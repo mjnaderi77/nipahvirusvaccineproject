@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Nipah Virus Molecular Dynamics GROMACS Workflow"
+message: "If you use this repository, please cite the associated study."
+type: software
+authors:
+  - family-names: "Author"
+    given-names: "Project"
+repository-code: "https://github.com/YOUR-USERNAME/nipah-virus-md-gromacs"
+license: MIT

@@ -1,0 +1,34 @@
+title                   = Nipah virus complex NPT equilibration
+define                  = -DPOSRES
+
+integrator              = md
+dt                      = 0.002
+nsteps                  = 500000      ; 1 ns
+
+nstxout-compressed      = 1000
+nstenergy               = 1000
+nstlog                  = 1000
+
+continuation            = yes
+constraint_algorithm    = lincs
+constraints             = h-bonds
+
+cutoff-scheme           = Verlet
+coulombtype             = PME
+rcoulomb                = 1.0
+rvdw                    = 1.0
+pme-order               = 4
+fourierspacing          = 0.12
+
+tcoupl                  = V-rescale
+tc-grps                 = Protein Water_and_ions
+tau_t                   = 0.1 0.1
+ref_t                   = 300 300
+
+pcoupl                  = C-rescale
+pcoupltype              = isotropic
+tau_p                   = 5.0
+ref_p                   = 1.0
+compressibility         = 4.5e-5
+
+pbc                     = xyz
